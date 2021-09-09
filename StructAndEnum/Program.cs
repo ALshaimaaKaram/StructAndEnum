@@ -34,6 +34,8 @@ namespace StructAndEnum
 
             #endregion
 
+            Console.WriteLine("\n ********************* 3DPoint ********************");
+
             #region 3DPoint
             _3DPoint p1 = new _3DPoint { X = 2, Y = 5, Z = 3 };
             _3DPoint p2 = new _3DPoint(2) { Y = 5 };
@@ -45,15 +47,23 @@ namespace StructAndEnum
                 Console.WriteLine("Not Equal");
 
             Console.WriteLine("**********************************");
-            Console.WriteLine(p1);
-
-            Console.WriteLine("**********************************");
             _3DPoint[] p = new _3DPoint[2];
             p[0] = p1;
             p[1] = p2;
             _3DPoint.Display(p);
 
+            Console.WriteLine("**********************************");
+            p[0].ChangeCoordinates(3, 9, 4);
+            Console.WriteLine("After change " + p[0].ToString());
+
             #endregion
+
+            Console.WriteLine("**********************************");
+            string g = "Alshaimaa";
+
+            _3DPoint.displayString(g);
+
+            Console.WriteLine("The String is " + g);
 
         }
     }

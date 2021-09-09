@@ -12,6 +12,8 @@ namespace StructAndEnum
         public int Y { get; set; }
         public int Z { get; set; }
 
+        public string str = "Alshaimaa";
+
         public _3DPoint() : this(1, 2, 3)
         {
 
@@ -41,6 +43,19 @@ namespace StructAndEnum
             {
                 Console.WriteLine(arr[i]);
             }
+        }
+
+        public void ChangeCoordinates(int newX, int newY, int newZ)
+        {
+            this.X = newX;
+            this.Y = newY;
+            this.Z = newZ;
+        }
+
+        public static void displayString(string st)
+        {
+            st = "Hello";
+            //Console.WriteLine("The string is " + st);
         }
     }
 }
